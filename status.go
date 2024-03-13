@@ -366,18 +366,18 @@ type FdbStatus struct {
 			Valid  bool `json:"_valid"`
 			Backup struct {
 				BlobRecentIo struct {
-					BytesPerSecond     int64 `json:"bytes_per_second"`
-					BytesSent          int64 `json:"bytes_sent"`
-					RequestsFailed     int64 `json:"requests_failed"`
-					RequestsSuccessful int64 `json:"requests_successful"`
+					BytesPerSecond     float64 `json:"bytes_per_second"`
+					BytesSent          int64   `json:"bytes_sent"`
+					RequestsFailed     int64   `json:"requests_failed"`
+					RequestsSuccessful int64   `json:"requests_successful"`
 				} `json:"blob_recent_io"`
 				Instances map[string]struct {
 					BlobStats struct {
 						Recent struct {
-							BytesPerSecond     int64 `json:"bytes_per_second"`
-							BytesSent          int64 `json:"bytes_sent"`
-							RequestsFailed     int64 `json:"requests_failed"`
-							RequestsSuccessful int64 `json:"requests_successful"`
+							BytesPerSecond     float64 `json:"bytes_per_second"`
+							BytesSent          int64   `json:"bytes_sent"`
+							RequestsFailed     int64   `json:"requests_failed"`
+							RequestsSuccessful int64   `json:"requests_successful"`
 						} `json:"recent"`
 						Total struct {
 							BytesSent          int64 `json:"bytes_sent"`
